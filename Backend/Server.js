@@ -25,7 +25,7 @@ mongoose.connect('mongodb+srv://Zohaib:Zohaib@cluster0.v7oju4g.mongodb.net/', {
 
 // Routes
 app.use('/api/resumes', resumeRoutes);
-
+app.use('/api/auth', authRoutes); 
 // Start the server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
