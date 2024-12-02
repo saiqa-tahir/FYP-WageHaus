@@ -12,6 +12,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
+<<<<<<< HEAD
     <Router>
       
       <Routes>
@@ -23,6 +24,16 @@ function App() {
       </Routes>
     </Router>
   );
+=======
+    <>
+<div></div>
+
+
+    <SeekerNavbar/>
+  
+        </>
+  )
+>>>>>>> ef3f6a4e3a303aae00c99b59c875607e2faaeb75
 }
 
 export default App;
