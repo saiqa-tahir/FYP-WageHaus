@@ -1,8 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const resumeRoutes = require('./routes/resumeRoutes');
+const authRoutes = require('./routes/auths');
+
+
+
 
 const app = express();
 
@@ -12,7 +17,7 @@ app.use(bodyParser.json()); // For parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://Zohaib:Zohaib@cluster0.v7oju4g.mongodb.net/', {
+mongoose.connect('mongodb+srv://harisfarooq402:rmNmCdZS8rZBFwHT@cluster0.xbwha.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
