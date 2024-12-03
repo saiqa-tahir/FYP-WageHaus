@@ -60,7 +60,7 @@ const SeekerNavbar = () => {
               </button>
               {menuOpen && (
                 <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
-                  <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-300 text-gray-700" role="menuitem" onClick={()=>{toggleSidebar(),toggleMenu()}}>Your Profile</a>
+                  <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-a00 text-gray-700" role="menuitem" onClick={()=>{toggleSidebar(),toggleMenu()}}>Your Profile</a>
                   <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-300 text-gray-700" role="menuitem">Settings</a>
                   <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-300 text-gray-700" role="menuitem">Sign out</a>
                 </div>
