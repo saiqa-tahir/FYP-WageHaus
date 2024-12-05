@@ -20,9 +20,7 @@ export default function RecruiterAndJobSeeker() {
           <Link to="/login/jobseeker">
             <button className="btn btn-primary btn-lg">Job Seeker</button>
           </Link>
-          <Link to="/login/Admin">
-            <button className="btn btn-warning btn-lg">Admin</button>
-          </Link>
+      
         </div>
       </div>
 
