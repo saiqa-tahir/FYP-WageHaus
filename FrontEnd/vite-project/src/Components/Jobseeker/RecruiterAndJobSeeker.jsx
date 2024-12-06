@@ -24,7 +24,7 @@ export default function RecruiterAndJobSeeker() {
         </div>
       </div>
 
-      {/* Right Side */}
+      {}
       <div className="right-side">
         <div className="design-content">
           <h3>Empowering Careers</h3>

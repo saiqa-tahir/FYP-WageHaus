@@ -20,6 +20,11 @@ export default function SignUp() {
     const handleSignUp = async (e) => {
         e.preventDefault();
         setError('');
+
+        if (!email || !password || !username) {
+            alert('Please fill all the fields.');
+            return;
+        }
         try {
             const res = await axios.post('http://localhost:5000/api/auth/signup', {
                 username,
@@ -28,15 +33,15 @@ export default function SignUp() {
                 role: userType,
             });
             alert('Sign up successful');
-            console.log(res.data); // Handle success
+            console.log(res.data); 
 
-            // Navigate to JobSearch page based on userType
+            
             if (userType === 'jobseeker') {
                 navigate('/SeekerNavbar/jobseeker');
             } else if (userType === 'recruiter') {
                 navigate('/jobsearch/recruiter');
             } else if(userType === 'Admin') {
-                navigate('/jobsearch/Admin'); // Default fallback
+                navigate('/jobsearch/Admin'); 
             }
 
         } catch (err) {
