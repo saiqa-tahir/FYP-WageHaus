@@ -45,9 +45,9 @@ export default function SignUp() {
             if (userType === 'jobseeker') {
                 navigate('/Jobsearch/jobseeker');
             } else if (userType === 'recruiter') {
-                navigate('/jobsearch/recruiter');
+                navigate('/Jobsearch/recruiter');
             } else if (userType === 'Admin') {
-                navigate('/jobsearch/Admin'); 
+                navigate('/Jobsearch/Admin'); 
             }
 
         } catch (err) {
