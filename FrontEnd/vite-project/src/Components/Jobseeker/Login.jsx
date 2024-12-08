@@ -38,11 +38,11 @@ export default function Login() {
 
             
             if (userType === 'jobseeker') {
-                navigate('/SeekerNavbar/jobseeker');
+                navigate('/Jobsearch/jobseeker');
             } else if (userType === 'recruiter') {
-                navigate('/jobsearch/recruiter');
+                navigate('/Jobsearch/recruiter');
             } else if(userType === 'Admin') {
-                navigate('/jobsearch/Admin'); 
+                navigate('/Jobsearch/Admin'); 
             }
         } catch (err) {
             setError(err.response?.data?.message || 'Something went wrong');

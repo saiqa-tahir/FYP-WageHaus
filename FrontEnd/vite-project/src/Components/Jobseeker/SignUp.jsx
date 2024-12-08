@@ -43,7 +43,7 @@ export default function SignUp() {
             console.log(res.data); 
 
             if (userType === 'jobseeker') {
-                navigate('/SeekerNavbar/jobseeker');
+                navigate('/Jobsearch/jobseeker');
             } else if (userType === 'recruiter') {
                 navigate('/jobsearch/recruiter');
             } else if (userType === 'Admin') {

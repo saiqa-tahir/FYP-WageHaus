@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Components/Jobseeker/Login';
 import RecruiterAndJobSeeker from './Components/Jobseeker/RecruiterAndJobSeeker';
 import SignUp from './Components/Jobseeker/SignUp';
+import Jobsearch from './Components/Jobseeker/Jobsearch';
 // Make sure you import SignUp
 import './App.css';
 
@@ -19,7 +20,8 @@ function App() {
         <Route path="/" element={<RecruiterAndJobSeeker />} />
         <Route path="/login/:userType" element={<Login />} />
         <Route path="/signup/:userType" element={<SignUp />} />
-       <Route path="/SeekerNavbar/:userType" element={<SeekerNavbar />}/>
+       <Route path="/Jobsearch/:userType" element={<Jobsearch />}/>
+       <SeekerNavbar/>
       </Routes>
     </Router>
   );
