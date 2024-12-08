@@ -25,13 +25,18 @@ export default function Login() {
             return;
         }
 
+        if (password.length > 12) {
+            setError('Password must be 12 characters or less.');
+            return;
+        }
+
 
         try {
             const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
             alert('Login successful');
-            console.log(res.data); // Handle token and user data as needed
+            console.log(res.data); 
 
-            // Navigate to Jobsearch page based on userType
+            
             if (userType === 'jobseeker') {
                 navigate('/SeekerNavbar/jobseeker');
             } else if (userType === 'recruiter') {

@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
 import axios from 'axios';
 import './LoginandSignUp.css';
+
 export default function SignUp() {
     const { userType } = useParams();
     const navigate = useNavigate();
@@ -25,6 +26,12 @@ export default function SignUp() {
             alert('Please fill all the fields.');
             return;
         }
+
+        if (password.length > 12) {
+            setError('Password must be 12 characters or less.');
+            return;
+        }
+
         try {
             const res = await axios.post('http://localhost:5000/api/auth/signup', {
                 username,
@@ -35,12 +42,11 @@ export default function SignUp() {
             alert('Sign up successful');
             console.log(res.data); 
 
-            
             if (userType === 'jobseeker') {
                 navigate('/SeekerNavbar/jobseeker');
             } else if (userType === 'recruiter') {
                 navigate('/jobsearch/recruiter');
-            } else if(userType === 'Admin') {
+            } else if (userType === 'Admin') {
                 navigate('/jobsearch/Admin'); 
             }
 
