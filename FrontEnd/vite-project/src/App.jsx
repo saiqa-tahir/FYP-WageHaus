@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SeekerNavbar from './Components/Jobseeker/SeekerNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Components/Jobseeker/Login';
 import RecruiterAndJobSeeker from './Components/Jobseeker/RecruiterAndJobSeeker';
@@ -13,7 +12,7 @@ function App() {
 
   return (
     <Router>
-      <SeekerNavbar />
+      
       <Routes>
         <Route path="/" element={<RecruiterAndJobSeeker />} />
         <Route path="/login/:userType" element={<Login />} />
