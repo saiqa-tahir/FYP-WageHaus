@@ -17,19 +17,19 @@ export default function Jobsearch() {
   };
 
   const handleSearch = () => {
-    // Simulating a search by adding dummy job data (replace this with API calls later)
+    // Dummy job data with salary as number and location as city only
     const dummyJobs = [
-      { id: 1, title: 'Software Engineer', salary: '$100K - $120K', location: 'New York, NY' },
-      { id: 2, title: 'Frontend Developer', salary: '$80K - $100K', location: 'San Francisco, CA' },
-      { id: 3, title: 'Backend Developer', salary: '$90K - $110K', location: 'Austin, TX' },
-      { id: 4, title: 'Full Stack Developer', salary: '$95K - $115K', location: 'Remote' },
-      { id: 5, title: 'Data Scientist', salary: '$110K - $130K', location: 'Chicago, IL' },
+      { id: 1, title: 'Software Engineer', salary: 120000, location: 'New York' },
+      { id: 2, title: 'Frontend Developer', salary: 100000, location: 'San Francisco' },
+      { id: 3, title: 'Backend Developer', salary: 110000, location: 'Austin' },
+      { id: 4, title: 'Full Stack Developer', salary: 115000, location: 'Remote' },
+      { id: 5, title: 'Data Scientist', salary: 130000, location: 'Chicago' },
     ];
 
     // Filter jobs based on user inputs
     const filteredJobs = dummyJobs.filter(job => 
       job.title.toLowerCase().includes(searchInputs.jobName.toLowerCase()) &&
-      job.salary.includes(searchInputs.salary) &&
+      job.salary >= Number(searchInputs.salary) &&
       job.location.toLowerCase().includes(searchInputs.location.toLowerCase())
     );
 
@@ -61,7 +61,7 @@ export default function Jobsearch() {
               <input
                 type="text"
                 name="location"
-                placeholder="Location"
+                placeholder="City"
                 value={searchInputs.location}
                 onChange={handleInputChange}
               />
@@ -76,7 +76,7 @@ export default function Jobsearch() {
             jobResults.map((job) => (
               <div className="job-card" key={job.id}>
                 <h3 className="job-title">{job.title}</h3>
-                <p className="job-salary">{job.salary}</p>
+                <p className="job-salary">${job.salary.toLocaleString()}</p> 
                 <p className="job-location">{job.location}</p>
                 <button className="apply-btn">Apply Now</button>
               </div>
@@ -89,6 +89,5 @@ export default function Jobsearch() {
     </>
   );
 }
-
 
 
