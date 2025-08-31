@@ -1,0 +1,87 @@
+/* Global styling for the dashboard */
+.admin-dashboard-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Admin Navbar */
+  .dashboard-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titles */
+  .dashboard-title {
+    font-size: 24px;
+    color: #091a0a;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .table-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Loading and error message */
+  .loading-text,
+  .error-message {
+    text-align: center;
+    font-size: 16px;
+    color: red;
+  }
+  
+  /* Tables */
+  .tables-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .table-section {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Table styling */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #202220;
+    color: white;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .user-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .user-table td {
+    color: #555;
+  }
+  
