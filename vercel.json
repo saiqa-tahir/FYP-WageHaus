@@ -2,12 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "FrontEnd/vite-project/package.json",
+      "src": "/FYP-WAGEHAUS/FrontEnd/vite-project/package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/FrontEnd/vite-project/$1" }
+    { "src": "/(.*)", "dest": "/FYP-WAGEHAUS/FrontEnd/vite-project/$1" }
   ]
 }
